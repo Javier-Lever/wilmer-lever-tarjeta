@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta digital Wilmer Lever</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .card {
+            width: 90%; /* Responsive width */
+            max-width: 500px; /* Limit width for desktop */
+            height: 300px; /* Increased height for desktop */
+            background: rgb(6,0,115);
+            background: linear-gradient(24deg, rgba(6,0,115,1) 0%, rgba(7,68,237,1) 23%, rgba(251,251,251,1) 100%);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically center content */
+            position: relative;
+        }
+
+        .profile {
+            width: 180px; /* Fixed width for the profile image */
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background: url('https://scontent-ams2-1.xx.fbcdn.net/v/t39.30808-6/229349121_4510085079043419_43418779743990942_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=tCtn69sIUTsQ7kNvgGnq0my&_nc_oc=AdgkkWHKCMenj_7Ie5P34zR3QAMMUHcQap0vAVC_ONu-IcsRudIBOAmwORNY02t6-CM&_nc_zt=23&_nc_ht=scontent-ams2-1.xx&_nc_gid=AVijGwmSRjRcSiL7IHQWnHm&oh=00_AYAmc_b6raTXtTbRyXtY72krZg8mMdPz_cQEXfGslAeNbg&oe=67C6EC99') no-repeat center center/cover;
+            margin-left: 20px; /* Space between info and profile image */
+            z-index: 2; /* Ensure it stays above the gradient */
+        }
+
+        .info {
+            flex: 1; /* Take up remaining space */
+            padding-right: 20px; /* Space between info and profile image */
+            z-index: 2; /* Ensure it stays above the gradient */
+        }
+
+        .info h2 {
+            margin: 0;
+            /* font-size: 24px; */ /* Slightly larger font size */
+            color: white;
+        }
+
+        .info p {
+            color: white;
+            margin: 10px 0; /* Increased margin for better spacing */
+            font-weight: 500;
+            font-size:medium;
+        }
+
+        .contact {
+            margin-top: 20px; /* Increased margin for better spacing */
+            display: flex;
+            gap: 10px; /* Space between contact icons */
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            width: 40px;
+            height: 40px; /* Ensure icons are square */
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 500px) {
+            .card {
+                flex-direction: column; /* Stack info and profile image vertically */
+                align-items: center; /* Center content */
+                text-align: center; /* Center text */
+                height: auto; /* Auto height for mobile */
+                padding: 20px; /* Reduced padding for mobile */
+            }
+
+            .profile {
+                order: -1; /* Move the profile image to the top */
+                margin-left: 0; /* Remove margin for mobile */
+                margin-bottom: 20px; /* Add space between profile and info */
+            }
+
+            .info {
+                padding-right: 0; /* Remove padding for mobile */
+            }
+
+            .info h2 {
+                font-size: 20px; /* Smaller font size for mobile */
+            }
+
+            .info p {
+                margin: 8px 0; /* Adjusted margin for mobile */
+            }
+
+            .contact {
+                margin-top: 15px; /* Adjusted margin for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="info">
+            <h2>Wilmer Lever</h2>
+            <p>Asesor Financiero y Vendedor <br>
+                de Puntos de Venta Autorizado</p>
+            <div class="contact">
+                <div><a href="tel:+584124439470"><img src="img/telephone.png" alt="Teléfono"></a></div>
+                <div><a href="https://wa.me/+584124499470"><img src="img/whatsapp.png" alt="WhatsApp"></a></div>
+                <div><a href="https://www.facebook.com/share/g/1BjhmicYaL/"><img src="img/facebook.png" alt="Facebook"></a></div>
+                <div><a href="mailto:socfintrasa@gmail.com"><img src="img/gmail.png" alt="Gmail"></a></div>
+            </div>
+        </div>
+        <div class="profile"></div>
+    </div>
+</body>
+</html>
